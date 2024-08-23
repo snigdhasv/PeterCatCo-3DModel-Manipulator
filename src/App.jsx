@@ -6,7 +6,7 @@ import { useAtom } from 'jotai';
 import { useEffect } from 'react';
 import { Environment, Lightformer,MeshReflectorMaterial } from '@react-three/drei';
 
-import { XR, createXRStore, VRButton } from '@react-three/xr';
+import { XR, createXRStore, VRButton, ARButton } from '@react-three/xr';
 
 import useLights from './components/LightsManager';
 import Lights from './components/Lights';
