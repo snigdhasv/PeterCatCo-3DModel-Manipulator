@@ -1,0 +1,286 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+#root{
+  width:100vw;
+  height: 100vh;
+}
+
+body{
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+  color: #f5f0f0;
+  transition: opacity 1s;
+  background-color: transparent;
+}
+
+.overlay .visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.logo {
+  font-family: "Racing Sans One", sans-serif;
+  color: #de1d1d;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  color: white;
+  pointer-events: auto;
+  background-color: transparent;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  padding: 1.5rem;
+  gap: 3rem;
+}
+
+.nav-bar .nav-left .nav-link,
+.nav-bar .nav-right .nav-link {
+  font-family: "Exo 2", sans-serif;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-bar .nav-left .nav-link:hover,
+.nav-bar .nav-right .nav-link:hover {
+  color: rgb(255, 0, 0);
+}
+
+label.nav-link{
+  cursor: pointer;
+}
+
+.exportbtn{
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.exportbtn:hover{
+  color: rgb(255, 0, 0);
+}
+
+.dropdown .dropbtn{
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown .dropbtn:hover{
+  color: rgb(255, 0, 0);
+}
+
+.dropdown-content {
+  font-family: "Exo 2", sans-serif;
+  display: none;
+  position: absolute;
+  background-color: #f5f0f0;
+  min-width: 13rem;
+  z-index: 1;
+}
+
+.dropdown-content button {
+  float: none;
+  min-width: 13rem;
+  border-style: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content button:hover {
+  background-color: #dba7a7;
+  cursor: pointer;  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  padding-top: 30rem;
+  font-family:"Racing Sans One", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin: 2rem;
+}
+
+.pages-button {
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  pointer-events: auto;
+  background-color: transparent;
+  color: #f5f0f0;
+  float: left;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 0 4px;
+}
+
+.pages .active {
+  background-color: #f5f0f0;
+  color: black;
+}
+
+.pages-button:hover {
+  font-weight: bold;
+  background-color: #de1d1d;
+  color: #f5f0f0;
+}
+
+
+/* VR/AR Buttons Styles */
+.vr-ar-buttons {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 20;
+}
+
+.vr-ar-buttons .buttons {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.vr-ar-buttons .buttons:hover {
+  background-color: rgba(255, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+.vr-ar-buttons .buttons:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+  .logo{
+    margin-right: 4rem;
+  }
+  .hamburger-menu {
+    margin: 1rem;
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .nav-left, .nav-right{
+    padding: 0;
+  }
+
+  .nav-left, .nav-right{
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-left .nav-link, .nav-right .nav-link {
+    padding: 0.8rem;
+  }
+
+  .vr-ar-buttons {
+    position: static;
+    gap: 0.5rem;
+    margin: 2rem;
+    margin-left: 15rem;
+  }
+
+  .vr-ar-buttons .buttons {
+    padding: 0.8rem 1.6rem;
+  }
+}
