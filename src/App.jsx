@@ -98,7 +98,7 @@ function App() {
         dpr={[1, 1.5]}
         style={{ backgroundColor: '#15151a' }}
       >
-        <XR store={store}>
+        <XR store={store} sessionInit={{ optionalFeatures: ['local-floor', 'bounded-floor', 'hand-tracking'] }}>
         <Experience />
         <Scene
           ref={sceneRef}
