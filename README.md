@@ -57,7 +57,7 @@ To get started with PeterCatCo-3D-Web-App, follow these steps:
   - Designed and integrated the user interface, ensuring a cohesive user experience.
 
 - **Tejas Pai**:
-  - Contributed to the development of core features using React and React Three Fiber.
+  - Developed core functionality using React and React Three Fiber.
   - Managed state with Jotai.
   - Collaborated on creating and optimizing 3D models and scenes with Three.js.
   - Played a key role in designing the user interface.
