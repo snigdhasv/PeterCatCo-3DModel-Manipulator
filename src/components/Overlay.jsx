@@ -190,6 +190,9 @@ export const Overlay = ({sceneRef, store}) => {
   const handleARClick = () => {
     if (store.enterAR) {
       store.enterAR();
+      if (sceneRef.current) {
+        sceneRef.current.visible = true;
+      }
     } else {
       console.error('store.enterAR is not defined');
     }
